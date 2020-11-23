@@ -71,15 +71,18 @@ class HomeController extends Controller
         $this->post_auth();
         $leadsService = $this->apiClient->leads();
         $usersService = $this->apiClient->users();
-        $this->apiClient->companies();
+        $notesService = $this->apiClient->notes(EntityTypesInterface::LEADS);
         try {
             $leads = $leadsService->get();
-            $notesService = $this->apiClient->notes(EntityTypesInterface::LEADS);
+            $notes = [];
+            $links = [];
+            $notes_username = [];
+            $entities = [];
             foreach ($leads as $lead) {
                 $responsible_user[$lead->getId()] = $usersService->getOne($lead->getResponsibleUserId())->getName();
-                $notes[$lead->getId()] = $notesService->getByParentId($lead->getId());
-                $links[$lead->getId()] = $leadsService->getLinks((new LeadModel())->setId($lead->getId()))->toArray();
-                if (isset($notes[$lead->getId()])) {
+                $links[$lead->getId()] = $leadsService->getLinks($lead)->toArray();
+                if ($notesService->getByParentId($lead->getId())) {
+                    $notes[$lead->getId()] = $notesService->getByParentId($lead->getId());
                     foreach ($notes[$lead->getId()] as $note) {
                         $notes_username[$note->getId()] = $usersService->getOne($note->getCreatedBy())->getName();
 
@@ -89,7 +92,6 @@ class HomeController extends Controller
                     $entities[$lead->getId()] = $this->getEntitiesFromLinks($lead, $links[$lead->getId()]);
                 }
             }
-
         } catch (AmoCRMoAuthApiException $e) {
         } catch (AmoCRMApiException $e) {
         }
@@ -191,7 +193,6 @@ class HomeController extends Controller
                 $company->setName($request->get('company'));
 
                 $companyService->addOne($company);
-                dump($companyService->getOne($company->getId()));
 
                 try {
                     $companyService->link($companyService->getOne($company->getId()), $linksCollection);  //doesn't work

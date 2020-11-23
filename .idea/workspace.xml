@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="adc48b07-e229-4774-865d-14e7cd1d0875" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../events/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../events/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../events/.vagrant/machines/events/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/../events/.vagrant/machines/events/virtualbox/action_set_name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../events/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../events/app/Http/Controllers/EventController.php" afterDir="false" />
@@ -32,7 +35,7 @@
     </execution>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../events" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -152,6 +155,7 @@
   <component name="ProjectId" id="1kap8tqcxh2QBUKAUdlwpGpldMG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -207,7 +211,7 @@
       <workItem from="1606037262247" duration="15484000" />
       <workItem from="1606061633525" duration="308000" />
       <workItem from="1606064893311" duration="595000" />
-      <workItem from="1606076284056" duration="32856000" />
+      <workItem from="1606076284056" duration="35608000" />
     </task>
     <servers />
   </component>
